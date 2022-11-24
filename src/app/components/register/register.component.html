@@ -1,0 +1,49 @@
+<div class="register-form">
+  <form [formGroup]="register">
+    <h3>Registro de notas</h3>
+    <div class="form-control">
+      <label class="_visually-hidden" for="name">Título de la nota:</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Título*"
+        formControlName="name"
+      >
+    </div>
+    <div class="form-control">
+      <label class="_visually-hidden" for="image">URL de imagen</label>
+      <input
+        type="text"
+        name="image"
+        id="image"
+        placeholder="URL de imagen*"
+        formControlName="image"
+      >
+    </div>
+    <div class="form-control">
+      <label class="_visually-hidden" for="description">Descripción</label>
+      <textarea
+        name="description"
+        id="description"
+        cols="30"
+        rows="7"
+        placeholder="Descripción*"
+        formControlName="description"
+      ></textarea>
+    </div>
+    <p class="error">* Campos requeridos.</p>
+    <div class="buttons">
+      <button
+      class="-style-1"
+      (click)="cancelRegister('cancel')"
+      >Cancelar</button>
+      <button
+        type="submit"
+        class="-style-2"
+        (click)="saveRegister()"
+        [disabled]="!register.valid"
+      >Guardar</button>
+    </div>
+  </form>
+</div>

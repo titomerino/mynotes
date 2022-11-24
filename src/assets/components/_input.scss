@@ -1,0 +1,28 @@
+@import './variables';
+
+input[type='text'] {
+  height: 25px;
+}
+
+input[type='text'],
+textarea {
+  border-radius: $border-radius;
+  border: 5px solid white;
+  color: inherit;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  transition: all 0.4s;
+  box-shadow: 0 4px 4px rgba(#000, 0.25);
+
+  &::placeholder {
+    color: $fgc-color;
+  }
+
+  &:active,
+  &:focus,
+  &:focus-visible {
+    border: 5px solid $secundary-color;
+    text-decoration: none;
+  }
+}

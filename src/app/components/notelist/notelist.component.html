@@ -1,0 +1,3 @@
+<div class="container-grid">
+  <app-noteitem *ngFor="let item of noteList" [item]="item" (action)="noteAction($event)"></app-noteitem>
+</div>

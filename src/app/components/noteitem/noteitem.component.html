@@ -1,0 +1,36 @@
+<div
+  class="note-item {{active}}"
+  (click)="onActive()"
+>
+  <div class="image">
+    <img src="{{item.image}}" alt="">
+  </div>
+  <div class="content">
+    <h3>{{item.name}}</h3>
+    <p>{{item.description.substring(0, 140)}}...</p>
+  </div>
+  <div class="action">
+    <button
+      class="-style-2"
+      title="Ver"
+      (click)="actionNote('see')"
+    >
+      <img
+        src="../../../assets/images/ver.png"
+        alt="Muestra un ojo representando ver"
+      >
+      <span class="_visually-hidden">Ver</span>
+    </button>
+    <button
+      class="-style-3"
+      title="Eliminar"
+      (click)="actionNote('delete')"
+    >
+      <img
+        src="../../../assets/images/papelera.png"
+        alt="Muestra una papelera"
+      >
+      <span class="_visually-hidden">Eliminar</span>
+    </button>
+  </div>
+</div>

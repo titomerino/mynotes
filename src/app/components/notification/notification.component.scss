@@ -1,0 +1,25 @@
+@import '../../../assets/components/variables';
+
+.container-notification {
+  border-radius: $border-radius;
+  bottom: 6rem;
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  position: fixed;
+  right: 2rem;
+  width: 200px;
+  z-index: 3;
+
+  &.-error {
+    background-color: red;
+  }
+
+  &.-success {
+    background-color: green;
+  }
+
+  &.-info {
+    background-color: cornflowerblue;
+  }
+}

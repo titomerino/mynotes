@@ -1,0 +1,60 @@
+@import '../../../assets/components/variables';
+
+.register-form {
+  background-color: rgba($primary-color, 0.7);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+
+  > form {
+    background-color: $tertiary-color;
+    border-radius: $border-radius;
+    left: 50%;
+    max-width: 600px;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    width: calc(100% - 4rem);
+    transform: translate(-50%, -50%);
+
+    > h3 {
+      text-align: center;
+      margin-top: 0;
+      background-color: $primary-color;
+      color: white;
+      padding: 0.5rem 1rem 1rem;
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
+
+    .buttons {
+      text-align: right;
+
+      button {
+        &:first-child {
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    .error {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.form-control {
+  > input,
+  textarea {
+    width: calc(100% - 2rem - 10px);
+    display: block;
+    margin-bottom: 1rem;
+
+    &.ng-invalid.ng-touched {
+      border: 5px solid red;
+    }
+  }
+}

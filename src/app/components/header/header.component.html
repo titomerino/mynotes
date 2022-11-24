@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="inner">
+    <h1>Mis Notas</h1>
+    <form [formGroup]="searchForm" class="search-form">
+      <input
+        type="text"
+        placeholder="Buscar nota"
+        formControlName="search"
+        (keyup)="changeInputValue()"
+      >
+    </form>
+  </div>
+</header>
